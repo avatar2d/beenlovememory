@@ -1,15 +1,32 @@
-html, body {
-      background-image: url(img/background.jpg);
-      background-size: 1920px 1080px;
-      margin: 0;
-      padding: 0;
+html,
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 500% 500%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+      margin: auto;
+      padding: auto;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 img {max-width: 100%;}
 
 body {
+      font-size: larger;
       display: grid;
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Quicksand", sans-serif;
       grid-template-columns: repeat(12, 1fr);
       grid-auto-rows: minmax(auto, auto);
       color: #3e3e3e;
@@ -17,7 +34,7 @@ body {
 }
 
 h1 {
-      font-family: "Script";
+      font-family: "Quicksand";
       font-weight: bold;
       grid-column: span 3;
       text-align: center;
@@ -34,6 +51,7 @@ h1 {
 }
 
 #clock-box, #info {
+      text-align: center;
       grid-column: span 3;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -46,7 +64,7 @@ h1 {
       padding-top: .8rem;
       text-align: center;
       font-size: 2.4rem;
-      border-radius: 10rem;
+      border-radius: 2rem;
 }
 
 date, time {
@@ -58,12 +76,13 @@ date {
 }
 
 time {
-      font-family: "Arial", sans-serif;
+      font-family: "Quicksand", sans-serif;
       line-height: 3.2rem;
       letter-spacing: 2px;
 }
 
 .avt {
+      object-fit: cover;
       width: 160px;
       height: 160px;
       border-radius: 50%;
@@ -75,6 +94,7 @@ time {
 }
 
 #heart {
+      animation: beat .25s infinite alternate;
       grid-column: span 2;
       display: grid;
       grid-template-rows: 2;
@@ -85,7 +105,14 @@ time {
       text-align: center;
 }
 
+@keyframes beat {
+      to {
+          transform: scale(1.4);
+      }
+  }
+  
 anni {
+      opacity: 0;
       font-size: 16px;
       letter-spacing: 0.2px;
 }
@@ -120,7 +147,6 @@ footer {
       z-index: 1000;
       opacity: .4;
 }
-
 #mask {
       background-image: linear-gradient(to top, #6d44cc5d 0%, #f09cd880 100%);
       opacity: .42;
@@ -130,7 +156,6 @@ footer {
       top: 0;
       left: 0;
 }
-
 @media (max-width: 992px) {
       #wrapper {
             grid-column: span 12;
@@ -141,6 +166,7 @@ footer {
       }
 
       .avt {
+            object-fit:cover;
             width: 120px;
             height: 120px;
       }

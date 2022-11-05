@@ -1,6 +1,5 @@
 const yourDate = new Date("2022-09-29T00:00:00"),
-music = ['tinhyeumauhong', 'anhtheday', 'anhsedonem', 'yeutrongnangmai', 'emkhacgihoa', 'nucuoiem', 'tinhca', 'anhdalacvao', 'emlahoanghon', 'thichthich', 'xinmaruocdau', 'changcanembantam', 'tinhyeukhunglong', 'phaichangemdayeu', 'seetinh', 'tuthichthichthanhthuongthuong'];
-
+music = ['treasure','vailandondua','votuyetvoinhat','yeu5','anhdaquenvoicodon','cuoithoi','daloyeuemnhieu','kemduyen','mattroicuaem','tayto','tinhyeunguquen'];
 document.addEventListener('DOMContentLoaded', function(){
       var rootTime = document.querySelector("time");
 
@@ -24,3 +23,4 @@ document.addEventListener('DOMContentLoaded', function(){
       );
 
 }, false);
+
