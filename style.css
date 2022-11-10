@@ -5,6 +5,7 @@ html, body {
       -webkit-animation: Gradient 15s ease infinite;
       -moz-animation: Gradient 15s ease infinite;
       animation: Gradient 15s ease infinite;
+      -webkit-transition: .3s;
       margin: 980;
       padding: 0;
 }
