@@ -1,26 +1,19 @@
-html,
-body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 500% 500%;
-	animation: gradient 10s ease infinite;
-	height: 100vh;
-      margin: auto;
-      padding: auto;
+html, body {
+      /* background-color: #f6f6f6; */
+      background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB, #27992d);
+      background-size: 400% 400%;
+      -webkit-animation: Gradient 15s ease infinite;
+      -moz-animation: Gradient 15s ease infinite;
+      animation: Gradient 15s ease infinite;
+      margin: 980;
+      padding: 0;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
+@keyframes Gradient {
+      0% { background-position: 0% 50% }
+      50% { background-position: 100% 50% }
+      100% { background-position: 0% 50% }
+     }
 img {max-width: 100%;}
 
 body {
@@ -92,25 +85,47 @@ time {
 #info {
       margin-top: 2.6rem;
 }
+.ngaysinh{
+      font-size: 15px;
+      line-height: 0.1;
+}
+#name2{
+      color: #fff;
+      text-shadow: #fb00ff 0px 0px 2px, #fb00ff 0px 0px 7px, #fb00ff 0px 0px 12px, #fb00ff 0px 0px 17px, #fb00ff 0px 0px 7px, #fb00ff 0px 0px 7px, #fb00ff 0px 0px 7px, #fb00ff 0px 0px 7px;
+}
 
+#name1{
+      color: #fff;
+    text-shadow: #2b31ff 0px 0px 2px, #2b31ff 0px 0px 7px, #2b31ff 0px 0px 12px, #2b31ff 0px 0px 17px, #2b31ff 0px 0px 7px, #2b31ff 0px 0px 7px, #2b31ff 0px 0px 7px, #2b31ff 0px 0px 7px;
+}
 #heart {
-      animation: beat .25s infinite alternate;
       grid-column: span 2;
       display: grid;
       grid-template-rows: 2;
-      font-size: 44px;
-      color: #ffb6c1;
+      font-size: 44px;   
       align-self: center;
       padding-bottom: 2.6rem;
       text-align: center;
 }
+.heartBeat {
+      text-decoration: none;
+      cursor: pointer;
+      animation: heartBeat 0.7s ease-in-out infinite;
+      position: relative;
+      z-index: 1000;
+      color: #b90d46;
+}
 
-@keyframes beat {
-      to {
-          transform: scale(1.4);
-      }
-  }
-  
+@keyframes heartBeat {
+      0% {transform: scale(.9);}
+    
+      45% {transform: scale(1.1);}
+    
+      70% {transform: scale(.9);}
+    
+      100% { transform: scale(.9); }
+    }
+
 anni {
       opacity: 0;
       font-size: 16px;
@@ -147,7 +162,15 @@ footer {
       z-index: 1000;
       opacity: .4;
 }
-
+#mask {
+      background-image: linear-gradient(to top, #6d44cc5d 0%, #f09cd880 100%);
+      opacity: .42;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+}
 @media (max-width: 992px) {
       #wrapper {
             grid-column: span 12;
@@ -179,3 +202,79 @@ footer {
       }
 }
 
+/* iPhone < 5 */
+@media screen and (device-aspect-ratio: 2/3) {
+      #wrapper {
+            margin-top: 0rem;
+      }
+
+      #info .one, #info .two{
+            grid-column: span 12;
+      }
+
+      #heart {
+            grid-column: span 12;
+      }
+
+      audio {
+            width: 240px;
+            /* height: 54px; */
+        }
+}
+
+/* iPhone 5/SE */
+@media screen and (device-aspect-ratio: 40/71) {
+      #wrapper {
+            margin-top: 0.6rem;
+      }
+
+      #info .one, #info .two{
+            grid-column: span 12;
+      }
+
+      #heart {
+            grid-column: span 12;
+      }
+
+      audio {
+            width: 240px;
+            /* height: 54px; */
+        }
+}
+
+/* iPhone X */
+@media only screen 
+    and (device-width : 375px) and (device-height : 812px)  and (orientation : portrait) and (-webkit-device-pixel-ratio : 3) {
+      #wrapper {
+            margin-top: 0.6rem;
+      }
+
+      #info .one, #info .two{
+            grid-column: span 12;
+      }
+
+      #heart {
+            grid-column: span 12;
+      }
+}
+
+/* Galaxy fold */
+@media only screen 
+    and (device-width : 280px) and (device-height : 653px)  and (orientation : portrait) and (-webkit-device-pixel-ratio : 3) {
+      #wrapper {
+            margin-top: 0rem;
+      }
+      
+      #info .one, #info .two{
+            grid-column: span 12;
+      }
+
+      #heart {
+            grid-column: span 12;
+      }
+
+      audio {
+            width: 240px;
+            /* height: 54px; */
+        }
+}
